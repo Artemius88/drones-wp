@@ -1,0 +1,95 @@
+@import "../../core.scss";
+
+.footer {
+  background: $black;
+  // font-family: "Source Code Pro", monospace;
+  font-family: $roboto;
+  padding: 55px 0 35px;
+}
+
+.footer-top {
+  @include flex-horizontal-nowrap(center, flex-start);
+  padding: 0 0 20px;
+  border-bottom: rgba(255, 255, 255, 0.3);
+  @include maxw($mob) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-logo-link {
+    width: 15%;
+    margin-right: auto;
+    @include maxw($mob) {
+      width: 100%;
+      img {
+        width: 40%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .footer-nav {
+    width: 25%;
+    @include maxw($mob) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    ul {
+      @include flex-vertical(flex-start, flex-start);
+      gap: 12px;
+      li {
+        a {
+          color: $white;
+          font-weight: 500;
+          font-size: 18px;
+          letter-spacing: 1px;
+          border-bottom: 1px solid transparent;
+          transition: 0.3s;
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  .footer-contacts {
+    width: 35%;
+    @include flex-vertical(flex-start, flex-end);
+    gap: 10px;
+    @include maxw($mob) {
+      width: 100%;
+    }
+
+    .footer-link {
+      color: $white;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    .contact-icons {
+      @include flex-horizontal-nowrap(flex-end, center);
+      gap: 15px;
+      a {
+        width: 35px;
+        height: 35px;
+        img {
+          @include full-container-image(contain);
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: $white;
+}

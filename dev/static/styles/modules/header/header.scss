@@ -1,0 +1,228 @@
+@import "../../core.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $black;
+  font-family: $roboto;
+  z-index: 10;
+
+  .cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 110;
+    @include maxw($mob) {
+      right: calc(5% + 60px);
+    }
+    .cart-contents {
+      width: 30px;
+      display: block;
+      height: 30px;
+      position: relative;
+      svg {
+        height: 30px;
+        width: auto;
+      }
+      .count {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-60%, 60%);
+        background: $white;
+        color: $black;
+        border: 1px solid #eee;
+        line-height: 1;
+        padding: 3px 2px;
+        border-radius: 50%;
+        font-size: 13px;
+        min-width: 20px;
+        font-weight: 700;
+        @include flex-horizontal-nowrap(center, center);
+      }
+    }
+  }
+
+  .top-header-wrap {
+    @include flex-horizontal-nowrap(center, center);
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    height: 110px;
+    overflow: hidden;
+    transition: 0.3s;
+    a {
+      height: 100%;
+      display: block;
+      img {
+        height: 100%;
+      }
+    }
+
+    @include maxw($mob) {
+      display: none;
+    }
+  }
+
+  .bottom-header-wrap {
+    @include flex-horizontal-nowrap(space-between, center);
+    padding: 10px 0;
+    transition: 0.3s;
+    nav {
+      @include maxw($mob) {
+        display: none;
+      }
+      ul {
+        @include flex-horizontal-nowrap(center, center);
+        gap: 10px;
+        transition: 0.3s;
+        height: 22px;
+        .nav-divider {
+          width: 1px;
+          height: 100%;
+          background: $orange;
+        }
+        li {
+          a {
+            color: $white;
+            padding: 6px 10px;
+            border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            transition: 0.3s;
+            letter-spacing: 1px;
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+    .bottom-logo-link {
+      height: 60px;
+      transition: 0.3s;
+      img {
+        height: 100%;
+      }
+
+      @include minw($mob) {
+        transform: translateX(50vw);
+      }
+    }
+  }
+
+  .menu-toggler {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white;
+    cursor: pointer;
+    @include flex-horizontal-nowrap(center, center);
+
+    .burger {
+      display: block;
+    }
+    .close-btn {
+      display: none;
+    }
+
+    &.open {
+      .burger {
+        display: none;
+      }
+      .close-btn {
+        display: block;
+      }
+    }
+
+    @include minw($mob) {
+      display: none;
+    }
+  }
+
+  &.header-scrolled {
+    .top-header-wrap {
+      height: 0;
+      padding: 0;
+      border-bottom: none;
+    }
+    .bottom-header-wrap {
+      justify-content: space-between;
+      @include minw($mob) {
+        height: 80px;
+      }
+      nav ul {
+        gap: 15px;
+      }
+    }
+    .bottom-logo-link {
+      transform: translateX(0) !important;
+    }
+  }
+}
+
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  transform: translateX(105%);
+  // transform: translateY(-105%);
+  box-sizing: border-box;
+  background: $black;
+  padding: 150px 5% 15vh;
+  z-index: 9;
+  @include flex-vertical(flex-start, flex-start);
+  &.open {
+    transform: translateX(0);
+    // transform: translateY(0);
+  }
+  nav {
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #000;
+    }
+    ul {
+      @include flex-vertical(flex-start, center);
+      height: 100%;
+      li {
+        margin-bottom: 20px;
+        a {
+          color: $white;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .contact-icons {
+    @include flex-horizontal-wrap(center, center);
+    margin-top: auto;
+    gap: 25px;
+    width: 100%;
+    a {
+      display: block;
+      width: 35px;
+      height: 35px;
+      img {
+        @include full-container-image(contain);
+      }
+    }
+  }
+}

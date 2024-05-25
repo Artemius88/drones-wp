@@ -1,0 +1,78 @@
+@import "vars";
+
+@mixin code-source($size, $weight) {
+  font-family: "Source Code Pro", monospace, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.3;
+}
+
+@mixin roboto($size, $weight) {
+  font-family: "Roboto", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.3;
+}
+
+@mixin size($a, $b: $a) {
+  width: $a;
+  height: $b;
+}
+
+/*
+Media queries
+*/
+
+@mixin maxw($media) {
+  @media only screen and(max-width: $media) {
+    @content;
+  }
+}
+
+@mixin minw($media) {
+  @media only screen and(min-width: $media) {
+    @content;
+  }
+}
+@mixin minh($media) {
+  @media only screen and(min-height: $media) {
+    @content;
+  }
+}
+@mixin maxh($media) {
+  @media only screen and(max-height: $media) {
+    @content;
+  }
+}
+
+/*
+Common
+*/
+@mixin full-container-image($object-fit) {
+  width: 100%;
+  height: 100%;
+  object-fit: $object-fit;
+}
+
+/*
+Flexbox
+*/
+@mixin flex-horizontal-wrap($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: wrap;
+}
+
+@mixin flex-horizontal-nowrap($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flex-vertical($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: column;
+}

@@ -1,0 +1,81 @@
+/*
+  Colors
+*/
+
+/*
+  Fonts
+*/
+
+/*
+  Border radius
+*/
+
+/*
+  Media-breakpoints
+*/
+
+/*
+  Colors
+*/
+
+/*
+  Fonts
+*/
+
+/*
+  Border radius
+*/
+
+/*
+  Media-breakpoints
+*/
+
+/*
+Media queries
+*/
+
+/*
+Common
+*/
+
+/*
+Flexbox
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+* {
+  position: relative;
+}
+
+body.noscroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+section {
+  overflow: hidden;
+  z-index: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

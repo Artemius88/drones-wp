@@ -1,0 +1,47 @@
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), repeat url(http://mybigpetes.com/wp-content/uploads/2022/01/productsbg.jpg);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), repeat url(http://mybigpetes.com/wp-content/uploads/2022/01/productsbg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), repeat url(http://mybigpetes.com/wp-content/uploads/2022/01/productsbg.jpg);
+  background-size: 100%;
+}
+
+body .products-main-section {
+  padding-top: 5rem;
+}
+
+.section-heading-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: calc(1% + 10px);
+}
+
+.section-heading-wrap .back-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  background: #93D500;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.section-heading-wrap .back-link svg {
+  fill: #fff;
+}
+
+.section-heading-wrap span {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}

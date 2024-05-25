@@ -1,0 +1,50 @@
+@import "../core.scss";
+
+body {
+  background: rgba(0, 0, 0, 0.8)
+    url(/wp-content/uploads/custom/bg_repeat_opacity.png);
+  color: $white;
+}
+
+.wp-block-woocommerce-cart {
+  padding: 60px 0;
+  max-width: 86%;
+  margin: 0 auto;
+}
+
+.wc-block-components-main {
+  table {
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    tr {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+
+      .wc-block-cart-item__wrap {
+        a {
+          color: #fff;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+.wc-block-components-sidebar {
+  border: 1px solid $white;
+  padding: 1rem !important;
+
+  .wp-block-woocommerce-cart-order-summary-coupon-form-block {
+    display: none;
+  }
+
+  .wc-block-cart__submit-container {
+    border: 1px solid #fff;
+  }
+
+  .wc-block-cart__submit-container,
+  .wc-block-cart__submit-container a {
+    box-sizing: border-box;
+    max-width: 100%;
+    color: #fff;
+  }
+}

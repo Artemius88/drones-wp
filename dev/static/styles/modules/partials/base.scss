@@ -1,0 +1,47 @@
+@import "../../core.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  // Set global fonts here
+}
+
+* {
+  position: relative;
+}
+
+// html {
+//   // MAIN REM VALUE
+//   font-size: 10px;
+// }
+
+body {
+  &.noscroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+section {
+  overflow: hidden;
+  z-index: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

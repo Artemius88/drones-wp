@@ -1,0 +1,98 @@
+/*
+  Colors
+*/
+
+/*
+  Fonts
+*/
+
+/*
+  Border radius
+*/
+
+/*
+  Media-breakpoints
+*/
+
+/*
+  Colors
+*/
+
+/*
+  Fonts
+*/
+
+/*
+  Border radius
+*/
+
+/*
+  Media-breakpoints
+*/
+
+/*
+Media queries
+*/
+
+/*
+Common
+*/
+
+/*
+Flexbox
+*/
+
+body {
+  background: rgba(0, 0, 0, 0.8) url(/wp-content/uploads/custom/bg_repeat_opacity.png);
+  color: #eee;
+}
+
+body main {
+  padding: 7%;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+  border: 1px solid #eee;
+}
+
+.wc-block-components-main {
+  border: 1px solid #eee;
+  padding: 16px 24px 16px 16px;
+}
+
+.wc-block-components-checkout-place-order-button {
+  cursor: pointer;
+}
+
+.woocommerce-thankyou-order-received {
+  margin-bottom: 1rem;
+}
+
+address {
+  line-height: 1.5;
+}
+
+address .woocommerce-customer-details--phone,
+address .woocommerce-customer-details--email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .wc-block-components-sidebar {
+    margin-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body main {
+    padding: 5%;
+  }
+}

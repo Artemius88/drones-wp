@@ -1,0 +1,45 @@
+@import "../core.scss";
+
+body {
+  background: rgba(0, 0, 0, 0.8)
+    url(/wp-content/uploads/custom/bg_repeat_opacity.png);
+  color: $white;
+
+  main {
+    padding: 7%;
+    @include maxw($mob) {
+      padding: 5%;
+    }
+  }
+}
+
+.wc-block-components-sidebar {
+  @include minw($mob) {
+    margin-top: 0 !important;
+  }
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+  border: 1px solid $white;
+}
+
+.wc-block-components-main {
+  border: 1px solid $white;
+  padding: 16px 24px 16px 16px;
+}
+
+.wc-block-components-checkout-place-order-button {
+  cursor: pointer;
+}
+
+.woocommerce-thankyou-order-received {
+  margin-bottom: 1rem;
+}
+
+address {
+  line-height: 1.5;
+  .woocommerce-customer-details--phone,
+  .woocommerce-customer-details--email {
+    @include flex-horizontal-nowrap(flex-start, center);
+  }
+}

@@ -1,0 +1,67 @@
+@import "../core.scss";
+
+.hero-section {
+  height: 50vh;
+  position: relative;
+  .hero-bg-image {
+    position: absolute;
+    @include full-container-image(cover);
+    filter: grayscale(100%);
+  }
+  .container {
+    @include flex-horizontal-nowrap(center, center);
+    height: 100%;
+  }
+  h1 {
+    font-family: "Source Code Pro", monospace;
+    color: $white;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+}
+
+.section-faq {
+  padding: 70px 0;
+  font-family: "Source Code Pro", monospace;
+}
+
+.faqs-wrap {
+  @include flex-vertical(flex-start, stretch);
+  gap: 25px;
+}
+
+.single-faq-wrap {
+  border-bottom: 1px solid $black;
+  &.opened .question svg {
+    transform: rotate(180deg);
+  }
+}
+
+.question {
+  padding: 15px;
+  @include flex-horizontal-nowrap(space-between, flex-start);
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  span {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  svg {
+    transition: 0.3s;
+    width: 35px;
+  }
+}
+
+.answer {
+  width: 75%;
+  margin-left: auto;
+  padding: 15px;
+  font-size: 20px;
+  font-style: italic;
+}
